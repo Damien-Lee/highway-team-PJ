@@ -1,15 +1,17 @@
-﻿<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>MAIN</title>
-    <style>
-        .main {float:left}
-        .side {float:rigth}
-    </style>
-    <script type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=69b62909907c366aa67b2e0ae75e9cd0"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<meta charset="UTF-8">
+<title>MAIN</title>
+<style>
+	.main {float:left}
+	.side {float:rigth}
+</style>
+<script type="text/javascript"
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=69b62909907c366aa67b2e0ae75e9cd0"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
 <div class="main" style="width:68%;height:750px;padding:60px">

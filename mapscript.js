@@ -6,6 +6,34 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
+
+// HTML5의 geolocation으로 사용할 수 있는지 확인합니다
+if (navigator.geolocation) {
+
+    // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+    navigator.geolocation.getCurrentPosition(function(position) {
+
+        var lat = position.coords.latitude, // 위도
+            lon = position.coords.longitude; // 경도
+
+        var locPosition = new kakao.maps.LatLng(lat, lon) // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+               setCenter(locPosition);
+                map.setLevel(7);
+
+    })
+
+} else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
+
+        var locPosition = new kakao.maps.LatLng(36.928647, 127.167764)
+        setCenter(locPosition);
+        map.setLevel(11);
+}
+function setCenter(locPosition) {
+            // 지도 중심을 이동 시킵니다
+            map.setCenter(locPosition);
+}
+
+
 // 지도에 추가된 지도타입정보를 가지고 있을 변수입니다
 var currentTypeId;
 
@@ -123,7 +151,10 @@ for (var i = 0; i < positions.length; i ++) {
     kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
         // 마커에 클릭이벤트를 등록합니다
     kakao.maps.event.addListener(marker, 'click', function() {
-        location.href="http://www.naver.com"; });
+        //location.href="http://www.naver.com";
+        var url="http://www.naver.com";
+        open(url)
+        });
 }
 
 // 인포윈도우를 표시하는 클로저를 만드는 함수입니다
@@ -139,6 +170,7 @@ function makeOutListener(infowindow) {
         infowindow.close();
     };
 }
+
 
 // select
 function sitemove(){
