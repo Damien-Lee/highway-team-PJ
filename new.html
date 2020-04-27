@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>추천 페이지</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<style>
+.hugeso {background:pink}
+</style>
+<script>
+$(function(){
+      $('h1').hover(function(){
+        $(this).css('background','yellow')
+    },function(){
+        $(this).css('background','white')
+    })
+    $('h2').hover(
+    function(){$(this).addClass('hugeso')},
+    function(){$(this).removeClass('hugeso')})
+})
+</script>
+<style>
+.rounded {
+  width: 700px;
+  background-color: #ddf;
+  border:2px solid #abc;
+  padding:1em;
+  line-height: 1em;
+  border-radius:0.2em;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.5em;
+  font-size:1.4em;
+  }
+</style>
+<div class='rounded'><strong>휴게소 맛집 랭킹</div>
+</head>
+<body>
+<h1>1. 1등 휴게소</h1>
+<h1>2. 2등 휴게소</h1>
+<h1>3. 3등 휴게소</h1>
+<h2>4. 4등 휴게소</h2>
+<h2>5. 5등 휴게소</h2>
+</body>
+   <style>
+      .a {
+        margin: 70px 0px;
+        text-align: center;
+        font-size: 250px;
+        color: #4969F2;
+        }
+    </style>
+<p class="a"><i class="fa fa-smile-o" aria-hidden="true"></i></p>
+<p class="a"><i class="fa fa-frown-o" aria-hidden="true"></i></p>
+</html>
