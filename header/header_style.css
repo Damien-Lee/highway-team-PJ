@@ -1,0 +1,9 @@
+* {box-sizing:border-box;}
+.body{margin: 0 auto;padding: 8px 10px 0;width: 1080px;text-align: left;}
+a {text-decoration:none;}
+.header {padding:20px 10px 4px;border:5px 40px;height:170px}
+.logo{position:relative;top:35px;left:50px;margin:0;padding-left:20px;}
+#choice{position:relative;margin:0 auto;padding:0 20px;width:100%;}/*상하 좌우, 시계방향*/
+.list{margin-block-start: 2em;padding-inline-start: 240px;}
+.list-item{display:inline;padding:10px;}
+.list-item > a:hover{color:#c6e3f9;}
