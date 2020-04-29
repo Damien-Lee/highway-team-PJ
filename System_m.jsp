@@ -23,8 +23,9 @@
 			<td>
 				<select name="select"><!-- 검색  -->
 					<option value="m_id">이메일</option>
-					<option value="m_id">닉네임</option>
-					<option value="m_id">생년월일</option>
+					<option value="m_nick">닉네임</option>
+					<option value="m_year">생년월일</option>
+					<option value="m_sex">성별</option> 
 				</select>
 				<input type="text" name="sv"><!-- 서치 벨류 -->
 				<input type="submit" value="검색버튼">
@@ -36,9 +37,11 @@
 			<td>이메일</td>
 			<td>닉네임</td>
 			<td>생년월일</td>
+			<td>성별</td>
 		</tr>
 		<c:forEach begin="1" end="10">
 			<tr height="30px">
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
