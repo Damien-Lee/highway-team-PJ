@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>추천 페이지</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+<script type="text/javascript">
+$(function(){
+  var ex_show = $('.ex_show');
+  var ex_hide = $('.ex_hide');
+  var ex_box = $('.ex_box');
+  ex_show.click(function(){
+    ex_box.fadeIn();
+  });
+  ex_hide.click(function(){
+    ex_box.fadeOut();
+  });
+});
+</script>
+<style type="text/css">
+.ex_show{float:left;margin-right:20px;cursor:pointer}
+.ex_hide{float:left;cursor:pointer}
+.ex_box{clear:both;
+ float:left;
+ width:100px;
+ height:50px;
+ background-color:red;
+ border:1px solid blue;
+ margin:50px;
+   border-radius:10px}</style>
+<style>
+.hugeso {background:pink}
+</style>
+<script>
+$(function(){
+      $('h1').hover(function(){
+        $(this).css('background','yellow')
+    },function(){
+        $(this).css('background','white')
+    })
+    $('h2').hover(
+    function(){$(this).addClass('hugeso')},
+    function(){$(this).removeClass('hugeso')})
+})
+</script>
+<style>
+.rounded {
+  width: 700px;
+  background-color: #ddf;
+  border:2px solid #abc;
+  padding:1em;
+  line-height: 1em;
+  border-radius:0.2em;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.5em;
+  font-size:1.4em;
+  }
+</style>
+<div class='rounded'><strong>휴게소 맛집 랭킹</div>
+</head>
+<body>
+<div float left>
+<a href="#none" onclick="fn()"><h1>1. 1등 휴게소</h1></a>
+    <h3>  이영자 추천 맛집</h3>
+<div id="a"><p class="a" ><i class="fa fa-smile-o" aria-hidden="true"></i></p></div>
+<script type="text/javascript">
+function fn() {
+$("#a").css("position","relative");
+if($("#a").css("opacity") == 1)
+$("#a").animate({opacity : 0,top:"+=500",left:"+=500"},1000);
+else
+$("#a").animate({opacity : 1,top:"0",left:"0"},1000);
+}
+</script>
+<h1>2. 2등 휴게소</h1>
+<h1>3. 3등 휴게소</h1>
+<h2>4. 4등 휴게소</h2>
+<h2>5. 5등 휴게소</h2>
+</div>
+</body>
+   <style>
+      .a {
+        margin: 0px 0px;
+        text-align: left;
+        font-size: 80px;
+        color: #4969F2;
+        }
+    </style>
+<div float rigt>
+
+</div>
+</html>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>휴게소 테마 소개</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery("#btn").click(function() {
+            if(jQuery("#displayDiv").css("display") == "none") {
+                jQuery("#displayDiv").fadeIn();}
+            else {jQuery("#displayDiv").fadeOut();}
+        });
+    });
+</script>
+</head>
+<body>
+    <h1>휴게소 테마 소개</h1>
+    <hr/>
+    <button type="button" id="btn">1위 휴게소 사진보기</button>
+    <div id="displayDiv">
+        <img src="https://post-phinf.pstatic.net/MjAxNzAzMjhfNzUg/MDAxNDkwNjY3NzQyMDUz.SwuuF3AkKeCURuoNetbdMtVwbkKvlF71ggwdea7BAt4g.wJox2lwR1rzTBdYsKBGJwTj9rEUYQfu-fCPq51Lgw0Eg.JPEG/1.jpg?type=w1200" width="400" height="300">
+
+    </div>
+</body>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery("#bttn").click(function() {
+            if(jQuery("#displayDivb").css("display") == "none") {
+                jQuery("#displayDivb").fadeIn();}
+            else {jQuery("#displayDivb").fadeOut();}
+        });
+    });
+</script>
+</head>
+<body>
+    <hr/>
+    <button type="button" id="bttn">2위 휴게소 사진 보기</button>
+    <div id="displayDivb">
+        <img src="https://www.ikld.kr/news/photo/201502/43817_21838_3340.jpg" width="400" height="300">
+    </div>
+</body>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery("#btttn").click(function() {
+            if(jQuery("#displayDivbb").css("display") == "none") {
+                jQuery("#displayDivbb").fadeIn();}
+            else {jQuery("#displayDivbb").fadeOut();}
+        });
+    });
+</script>
+</head>
+<body>
+    <hr/>
+    <button type="button" id="btttn">3위 휴게소 사진 보기</button>
+    <div id="displayDivbb">
+        <img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile4.uf.tistory.com%2Fimage%2F9907853D5C206EBC2472E1" width="400" height="300">
+    </div>
+</html>
