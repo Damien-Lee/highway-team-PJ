@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
-<title>공지사항,Q&A게시판</title>
+<title>공지사항</title>
 </head>
 <body>
 	<%
@@ -13,6 +13,20 @@
 		if (session.getAttribute("userID") != null){
 			userID = (String)session.getAttribute("userID");
 		}
+
+		String title = request.getParameter("title");
+		String content = request.getParameter("content");
+		String writer = request.getParameter("writer");
+		String date = request.getParameter("date");
+		int cnt = Integer.parseInt(request.getParameter("cnt"));
+	
+
+		/*if(title==null || content==null || title.trim().equals("")||content.trim().equals("")){
+			out.println("공지 내용과 제목을 입력하세요!!!");
+			out.println("<a href=notice_write.jsp>돌아가기</a>");
+			return;
+		}*/
+
 	%>
 	<div class="container">
 		<div class="row">
@@ -20,19 +34,13 @@
 			<table class="table" style="text-align: center; border: 1px solic #dddddd">
 				<thead>
 					<tr>
-						<th colspan="2" style="background-color: #eeeeee; text-align: center;width:1000px">게시판 글쓰기 양식</th>
+						<th colspan="2" style="background-color: #eeeeee; text-align: center;width:1000px">공지사항 게시판 글쓰기</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-                        <td>
-                            <select name="content" style="width:200px;height:20px;">
-                                <option value="공지사항">공지사항</option>
-                                <option value="Q&A">Q&A</option>
-                            </select>
-                        </td>
-						<td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50" style="width:800px;height: 20px;" ></td>
-					</tr>
+				
+						<td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50" style="width:1000px;height: 20px;" ></td>
+
 					<tr>
 						<td colspan="2"><textarea class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="width:1000px;height: 350px;"></textarea></td>
 					</tr>
