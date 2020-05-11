@@ -5,6 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <title>login.jsp</title>
+    <script>
+ 
+    </script>
     <style>
         #headtext{color: blue;}
         #idtable {margin-top:5%}
@@ -16,7 +19,7 @@
     <form action="logingo.jsp"  method="post">
      <table align="center" id="idtable" >
         <tr height="50px">
-            <td>아이디 : </td>
+            <td>이메일 : </td>
             <td>
                <input type="text" id="id" name="id"height="100px" style="width:300px; height:30px"/>
             </td>
@@ -33,7 +36,7 @@
              <td>
              </td>
              <td>
-                 <input type="submit" id="emaillogin" value="이메일 로그인"> 
+                 <input type="submit"  id="emaillogin" value="이메일 로그인"> 
                  <input type="button" id="joinmember"value="회원가입"/>
                  <input type="reset" value="취소"> 
              </td>
