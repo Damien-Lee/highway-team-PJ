@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="review.DAO.ReviewDAO"%>
-<%@ page import="info.service.MessageListView"%>
-<%@ page import="info.service.GetMessageListService"%>
+<%@ page import="review.model.Review"%>
+<%@ page import="review.service.ReviewListView"%>
+<%@ page import="review.service.GetReviewListService"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html lang="en">
