@@ -13,10 +13,10 @@ import review.model.Review;
 
 public class ReviewDAO {
 	
-	private static ReviewDAO reviewDAO = new ReviewDAO();
+	private static ReviewDAO instacne = new ReviewDAO();
 	
 	public static ReviewDAO getInstance(){
-		return reviewDAO;
+		return instacne;
 	}
 	
 	private ReviewDAO() {}

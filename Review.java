@@ -68,11 +68,11 @@ public class Review {
 		return name != null && !name.isEmpty();
 	}
 	
-	public boolean matchPassword() {
+	public boolean matchPassword(String repw) {
 		return repw != null && repw.equals(repw);
 	}
 	
-	public boolean matchName() {
+	public boolean matchName(String name) {
 		return name != null && name.equals(name);
 	}
 	
